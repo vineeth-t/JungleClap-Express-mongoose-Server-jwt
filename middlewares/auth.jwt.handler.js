@@ -1,4 +1,4 @@
-const authSecret = process.env['secret']
+const authSecret = process.env['secret'];
 const jwt=require('jsonwebtoken')
 
 const authHeaderValidator=async(req,res,next)=>{
