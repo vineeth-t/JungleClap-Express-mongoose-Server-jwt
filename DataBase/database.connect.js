@@ -1,7 +1,9 @@
 const mongoose= require('mongoose')
+const userName = process.env['dbUserName']
+const password = process.env['password']
 
 const InitialiseDataBase=async()=>{
-  await mongoose.connect('mongodb+srv://tanay:pavan123@cluster0.rm9xi.mongodb.net/Ecommerce?retryWrites=true&w=majority',{
+  await mongoose.connect(`mongodb+srv://${userName}:${password}@cluster0.rm9xi.mongodb.net/Ecommerce?retryWrites=true&w=majority`,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
