@@ -28,7 +28,7 @@ const {errorHandler}=require('./middlewares/errorHandler.route.js')
 const {authHeaderValidator}=require('./middlewares/auth.jwt.handler.js')
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000,https://jungleclap.netlify.app');
+  res.setHeader('Access-Control-Allow-Origin', 'https://jungleclap.netlify.app');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   next();
